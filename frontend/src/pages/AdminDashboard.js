@@ -11,7 +11,8 @@ const Dashboard = () => {
 
   const fetchFeedbacks = async () => {
     try {
-      const res = await axios.get("http://localhost:5000/api/feedbacks");
+   const res = await axios.post("https://final-hackhathone1-b.vercel.app/api/feedbacks", feedbackData);
+
       setFeedbacks(res.data.feedbacks);
     } catch (error) {
       console.error("Failed to fetch feedbacks:", error);
