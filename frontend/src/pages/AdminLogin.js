@@ -12,7 +12,7 @@ export default function AdminLogin() {
   const handleLogin = async (e) => {
     e.preventDefault();
     try {
-      const res = await axios.post('http://localhost:5000/api/admin/login', credentials);
+      const res = await axios.post('https://final-hackhathone1-b.vercel.app/api/admin/login', credentials);
       localStorage.setItem('token', res.data.token);
       navigate('/admin/dashboard');
     } catch (error) {
