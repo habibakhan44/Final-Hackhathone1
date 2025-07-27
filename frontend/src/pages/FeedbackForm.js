@@ -14,7 +14,7 @@ export default function FeedbackForm() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      await axios.post('http://localhost:5000/api/feedbacks', formData);
+axios.post('https://final-hackhathone1-b.vercel.app/api/feedbacks', formData);
       window.location.href = '/thankyou';
     } catch (error) {
       alert('Error submitting feedback!');
